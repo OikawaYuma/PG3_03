@@ -17,7 +17,7 @@ void StageScene::Init()
 
 void StageScene::Update()
 {
-	// ’e‚Ì”­Ë
+	// å¼¾ã®ç™ºå°„
 	if (input_->TriggerKey(DIK_SPACE)) {
 		isShot = true;
 	}
@@ -25,12 +25,12 @@ void StageScene::Update()
 	if (isShot) {
 		bulletPos.y-=5;
 	}
-	// “–‚½‚è”»’è
+	// å½“ãŸã‚Šåˆ¤å®š
 	if (bulletPos.y - 10 <= enemyPos.y + 40) {
 		isAlive = false;
 	}
 	
-	// ƒV[ƒ“‘JˆÚ
+	// ã‚·ãƒ¼ãƒ³é·ç§»
 	if (!isAlive) {
 		sceneNo_ = CLEAR;
 	}
@@ -49,7 +49,7 @@ void StageScene::Draw()
 		Novice::DrawEllipse((int)enemyPos.x, (int)enemyPos.y, 40, 40, 0.0f, BLACK, kFillModeSolid);
 	}
 }
-// ƒQ[ƒ€‚ğI—¹
+// ã‚²ãƒ¼ãƒ ã‚’çµ‚äº†
 int StageScene::GameClose()
 {
 	if (input_->TriggerKey(DIK_ESCAPE)) {

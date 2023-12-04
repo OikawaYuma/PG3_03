@@ -7,7 +7,7 @@ void ClearScene::Init()
 
 void ClearScene::Update()
 {
-	// ƒV[ƒ“‘JˆÚ
+	// ã‚·ãƒ¼ãƒ³é·ç§»
 	if (input_->TriggerKey(DIK_SPACE)) {
 		sceneNo_ = TITLE;
 	}
@@ -18,7 +18,7 @@ void ClearScene::Draw()
 }
 
 
-// ƒQ[ƒ€‚ðI—¹
+// ã‚²ãƒ¼ãƒ ã‚’çµ‚äº†
 int ClearScene::GameClose()
 {
 	if (input_->TriggerKey(DIK_ESCAPE)) {

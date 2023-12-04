@@ -9,7 +9,7 @@ void TitleScene::Init()
 
 void TitleScene::Update()
 {
-	// ƒV[ƒ“‘JˆÚ
+	// ã‚·ãƒ¼ãƒ³é·ç§»
 	if (input_->TriggerKey(DIK_SPACE)) {
 		sceneNo_ = STAGE;
 	}
@@ -19,7 +19,7 @@ void TitleScene::Draw()
 	Novice::DrawBox(0, 0, 1280, 720, 0.0f, 0x660000FF, kFillModeSolid);
 }
 
-// ƒQ[ƒ€‚ðI—¹
+// ã‚²ãƒ¼ãƒ ã‚’çµ‚äº†
 int TitleScene::GameClose()
 {
 	if (input_->TriggerKey(DIK_ESCAPE)) {
