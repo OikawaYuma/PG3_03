@@ -12,6 +12,16 @@ void StageScene::Init()
 	enemyPos = { 640,50 };
 	isAlive = true;
 
+	inputHandler_ = new InputHandle();
+
+	//Assign command
+	inputHandler_->AssignMoveRightCommand2PressKeyD();
+	inputHandler_->AssignMoveLeftCommand2PressKeyA();
+
+	//New Player
+	player_ = new Player();
+	player_->Init();
+
 	
 }
 
@@ -35,12 +45,18 @@ void StageScene::Update()
 		sceneNo_ = CLEAR;
 	}
 
+	command_ = inputHandler_->HandleInput();
 
+	if (this->command_) {
+		command_->Exec(*player_);
+	}
+	player_->Update();
 }
 void StageScene::Draw()
 {
 	Novice::DrawBox(0, 0, 1280, 720, 0.0f,0x006600FF, kFillModeSolid);
-	Novice::DrawEllipse((int)playerPos.x, (int)playerPos.y, 40, 40, 0.0f, WHITE, kFillModeSolid);
+	//Novice::DrawEllipse((int)playerPos.x, (int)playerPos.y, 40, 40, 0.0f, WHITE, kFillModeSolid);
+	player_->Draw();
 	if (isShot) {
 		Novice::DrawEllipse((int)bulletPos.x, (int)bulletPos.y, 10, 10, 0.0f, WHITE, kFillModeSolid);
 	}

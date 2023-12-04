@@ -50,6 +50,15 @@
     <ClCompile Include="Scene\ClearScene.cpp">
       <Filter>KamataEngine</Filter>
     </ClCompile>
+    <ClCompile Include="Game\Player.cpp">
+      <Filter>KamataEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\ICommand.cpp">
+      <Filter>KamataEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\InputHandle.cpp">
+      <Filter>KamataEngine</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="C:\KamataEngine\DirectXGame\audio\Audio.h">
@@ -125,5 +134,8 @@
     <ClInclude Include="Scene\StageScene.h" />
     <ClInclude Include="Scene\TitleScene.h" />
     <ClInclude Include="Scene\ClearScene.h" />
+    <ClInclude Include="Game\Player.h" />
+    <ClInclude Include="Game\ICommand.h" />
+    <ClInclude Include="Game\InputHandle.h" />
   </ItemGroup>
 </Project>
